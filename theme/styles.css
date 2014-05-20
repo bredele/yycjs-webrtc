@@ -1,6 +1,19 @@
+.slide-content {
+  margin: 40px auto 0 auto;
+}
 
-.slide {
-	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 26px;
-	color: #797979;
+.pic {
+	margin-top:40px;
+}
+.pic img {
+	height:450px;
+}
+.center {
+	font-size: 22px;
+	text-align: center;
+}
+
+.vertical {
+	margin-top:200px;
+	text-align: center;
 }

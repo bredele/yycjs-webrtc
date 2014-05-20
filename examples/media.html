@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Media</title>
+</head>
+<body>
+	<video muted autoplay></video>
+	<script>
+	navigator.getUserMedia = navigator.getUserMedia ||
+	  navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+	var constraints = {video: true};
+
+	function successCallback(localMediaStream) {
+	  var video = document.querySelector("video");
+	  video.src = window.URL.createObjectURL(localMediaStream);
+	}
+
+	function errorCallback(error){
+	  console.log("navigator.getUserMedia error: ", error);
+	}
+
+	navigator.getUserMedia(constraints, successCallback, errorCallback);
+	</script>
+</body>
+</html>
